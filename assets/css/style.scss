@@ -1,0 +1,266 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+:root {
+    --background-colour-dark: #0a0a0a;
+    --background-colour-light: #1b1b1b;
+    --light-gray: #aaaaaa;
+    --text-colour: #f2f2f2;
+    --text-alt-colour: #4a95ec;
+    --text-alt-colour-darker: #3976bc;
+    --dot-bg: var(--background-colour-dark);
+    --dot-color: #1b1b1b;
+    --dot-size: 2px;
+    --dot-space: 22px;
+}
+
+html {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 16px;
+  color: var(--text-colour);
+  background-color: var(--background-colour-dark);
+  background:
+      linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+      linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+      var(--dot-color);     
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Bai Jamjuree', sans-serif;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+img {
+  max-width: 500px;
+}
+
+.highlight .cm {
+  color: var(--light-gray);
+}
+.highlight .cp {
+  color: var(--light-gray);
+}
+.highlight .c1 {
+  color: var(--light-gray);
+}
+.highlight .cs {
+  color: var(--light-gray);
+}
+.highlight .c,
+.highlight .cd {
+  color: var(--light-gray);
+}
+.highlight .err {
+  color: #a61717;
+  background-color: #e3d2d2;
+}
+.highlight .gd {
+  color: var(--text-colour);
+  background-color: #ffdddd;
+}
+.highlight .ge {
+  color: var(--text-colour);
+}
+.highlight .gr {
+  color: #ff8686;
+}
+.highlight .gh {
+  color: var(--light-gray);
+}
+.highlight .gi {
+  color: var(--text-colour);
+  background-color: #ddffdd;
+}
+.highlight .go {
+  color: #888888;
+}
+.highlight .gp {
+  color: #555555;
+}
+.highlight .gs {
+  color: var(--text-colour);
+}
+.highlight .gu {
+  color: var(--light-gray);
+}
+.highlight .gt {
+  color: #ff7f7f;
+}
+.highlight .kc,
+.highlight .kd,
+.highlight .kn,
+.highlight .kp,
+.highlight .kr {
+  color: var(--text-colour);
+}
+.highlight .kt {
+  color: #97b1ff;
+}
+.highlight .k,
+.highlight .kv {
+  color: var(--text-colour);
+}
+.highlight .mf,
+.highlight .mh,
+.highlight .il,
+.highlight .mi,
+.highlight .mo,
+.highlight .m,
+.highlight .mb,
+.highlight .mx {
+  color: #9df9f9;
+}
+.highlight .sb,
+.highlight .sc,
+.highlight .sd,
+.highlight .s2,
+.highlight .se,
+.highlight .sh,
+.highlight .si,
+.highlight .sx,
+.highlight .s1,
+.highlight .s {
+  color: rgb(229, 93, 127);
+}
+.highlight .sr {
+  color: #40f06c;
+}
+.highlight .ss {
+  color: #f967d5;
+}
+.highlight .na {
+  color: #83ffff;
+}
+.highlight .bp {
+  color: var(--light-gray);
+}
+.highlight .nb {
+  color: #69d9ff;
+}
+.highlight .nc {
+  color: #7295ff;
+}
+.highlight .no {
+  color: #008080;
+}
+.highlight .nd {
+  color: #3f5d5d;
+}
+.highlight .ni {
+  color: #ff5aff;
+}
+.highlight .ne,
+.highlight .nf,
+.highlight .nl {
+  color: #ff4747;
+}
+.highlight .nn {
+  color: #ff6a6a;
+}
+.highlight .nt {
+  color: #3d3dff;
+}
+.highlight .vc,
+.highlight .vg,
+.highlight .vi,
+.highlight .nv {
+  color: #7affff;
+}
+.highlight .ow,
+.highlight .o {
+  color: var(--text-colour);
+}
+.highlight .w {
+  color: #bbbbbb;
+}
+.highlight {
+  background-color: var(--background-colour-light);
+}
+
+body {
+    background-color: transparent;
+    color: var(--light-gray);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--text-colour);
+}
+
+h2 {
+    color: var(--text-colour);
+}
+
+h3,
+h4,
+h5,
+h6 {
+    color: var(--text-colour);
+}
+
+a {
+    color: var(--text-alt-colour);
+}
+
+a:hover,
+a:focus {
+    color: var(--text-alt-colour-darker);
+}
+
+a small {
+    color: var(--light-gray);
+}
+
+a:hover small {
+    color: var(--light-gray);
+}
+
+blockquote {
+    border-left: 1px solid var(--background-colour-light);
+}
+
+code,
+pre {
+    color: var(--text-colour);
+}
+
+pre {
+    background: var(--background-colour-light);
+    border: 1px solid var(--background-colour-light);
+}
+
+th,
+td {
+    border-bottom: 1px solid var(--background-colour-light);
+}
+
+dt {
+    color: var(--text-colour);
+}
+
+th {
+    color: var(--text-colour);
+}
+
+kbd {
+    background-color: var(--background-colour-light);
+    border: 1px solid var(--light-gray);
+    border-bottom-color: var(--light-gray);
+    box-shadow: inset 0 -1px 0 var(--light-gray);
+    color: var(--text-colour);
+}
+
+strong {
+    color: var(--text-colour);
+}
+
+hr {
+    background: var(--background-colour-light);
+}
