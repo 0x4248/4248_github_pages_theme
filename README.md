@@ -6,7 +6,7 @@ A theme based on the minimal theme and modified to follow the 4248 color scheme.
 
 Clone this repository and remove the `.git` directory and any other files you don't need. You can then edit the markdown files and use the pages section of the settings to publish the site.
 
-[Test all elements](https://0x4248.dev/4248_github_pages_theme/)
+[Test all elements](https://0x4248.dev/4248_github_pages_theme/test)
 
 ## License
 
