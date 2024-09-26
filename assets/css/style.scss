@@ -37,6 +37,10 @@ img {
   max-width: 500px;
 }
 
+.logo {
+  width: 100%;
+}
+
 .highlight .cm {
   color: var(--light-gray);
 }
@@ -263,4 +267,10 @@ strong {
 
 hr {
     background: var(--background-colour-light);
+}
+
+@media screen and (min-width: 768px) {
+  .logo {
+    display: none;
+  }
 }
