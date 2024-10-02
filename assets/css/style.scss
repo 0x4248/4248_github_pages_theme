@@ -306,7 +306,7 @@ section img {
 }
 
 section {
-  pre, table {
+  pre, table, .highlight {
     opacity: 0;
     animation: animation-in 1s forwards 0.5s cubic-bezier( 0.86, 0, 0.07, 1 );
   }
