@@ -274,3 +274,45 @@ hr {
     display: none;
   }
 }
+
+@keyframes  animation-in {
+  from {
+      opacity: 0;
+      scale: 0.9;
+  }
+  to {
+      opacity: 1;
+      scale: 1;
+  }
+  
+}
+
+section {
+  opacity: 0;
+  animation: animation-in 1s forwards 0.2s cubic-bezier( 0.86, 0, 0.07, 1 );
+}
+
+section h1 {
+  opacity: 0;
+  animation: animation-in 1s forwards 0.4s cubic-bezier( 0.86, 0, 0.07, 1 );
+}
+
+section h2, h3, h4, h5, h6 {  
+  opacity: 0;
+  animation: animation-in 1s forwards 0.4s cubic-bezier( 0.86, 0, 0.07, 1 );
+}
+
+section ul, ol {
+  opacity: 0;
+  animation: animation-in 1s forwards 0.4s cubic-bezier( 0.86, 0, 0.07, 1 );
+}
+
+section p{
+  animation: animation-in 0.8s forwards 0.4s cubic-bezier( 0.86, 0, 0.07, 1 );
+}
+
+section img {
+  max-width: 100%;
+  opacity: 0;
+  animation: animation-in 1s forwards 0.4s cubic-bezier( 0.86, 0, 0.07, 1 );
+}
