@@ -297,7 +297,7 @@ section h1 {
   animation: animation-in 1s forwards 0.2s cubic-bezier( 0.86, 0, 0.07, 1 );
 }
 
-section h2, h3, h4, h5, h6 {  
+section h2, section h3, section h4, section h5, section h6 {  
   opacity: 0;
   animation: animation-in 1s forwards 0.3 cubic-bezier( 0.86, 0, 0.07, 1 );
 }
