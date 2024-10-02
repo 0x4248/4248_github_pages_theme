@@ -304,3 +304,10 @@ section img {
   opacity: 0;
   animation: animation-in 1s forwards 0.4s cubic-bezier( 0.86, 0, 0.07, 1 );
 }
+
+section {
+  pre, table {
+    opacity: 0;
+    animation: animation-in 1s forwards 0.5s cubic-bezier( 0.86, 0, 0.07, 1 );
+  }
+}
