@@ -37,10 +37,6 @@ section p {
   color: var(--text-colour-darker);
 }
 
-.wrapper {
-  width:1000px;
-}
-
 h1 { 
   font-size: 2.5em;
 }
@@ -140,6 +136,7 @@ hr {
 
 table {
     width: auto;
+    max-width: 80%;
     overflow: auto;
 }
 
