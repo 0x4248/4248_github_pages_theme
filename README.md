@@ -4,9 +4,61 @@ A theme based on the minimal theme and modified to follow the 4248 color scheme.
 
 ## Installation
 
-Clone this repository and remove the `.git` directory and any other files you don't need. You can then edit the markdown files and use the pages section of the settings to publish the site.
+Create the following workflow file in your repository at `.github/workflows/pages.yml`:
 
-[Test all elements](https://0x4248.dev/4248_github_pages_theme/test)
+```yaml
+name: Deploy Jekyll with GitHub Pages dependencies preinstalled
+
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup 0x4248 theme
+        run: curl https://raw.githubusercontent.com/0x4248/4248_github_pages_theme/refs/heads/main/setup.sh > setup.sh && sh setup.sh
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+      - name: Build with Jekyll
+        uses: actions/jekyll-build-pages@v1
+        with:
+          source: ./
+          destination: ./_site
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+```
+
+Or run this on your project root:
+
+```bash
+mkdir -p .github/workflows
+curl https://raw.githubusercontent.com/0x4248/4248_github_pages_theme/refs/heads/main/pages.yml > .github/workflows/pages.yml
+```
 
 ## License
 
