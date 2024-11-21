@@ -18,14 +18,22 @@
 }
 
 html {
-  font-family: 'Ubuntu', sans-serif;
-  font-size: 16px;
-  color: var(--text-colour);
-  background-color: var(--background-colour-dark);
-  background:
-      linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
-      linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
-      var(--dot-color);     
+    font-family: "Ubuntu", sans-serif;
+    font-size: 16px;
+    color: var(--text-colour);
+    background-color: var(--background-colour-dark);
+    background: linear-gradient(
+                90deg,
+                var(--dot-bg) calc(var(--dot-space) - var(--dot-size)),
+                transparent 1%
+            )
+            center / var(--dot-space) var(--dot-space),
+        linear-gradient(
+                var(--dot-bg) calc(var(--dot-space) - var(--dot-size)),
+                transparent 1%
+            )
+            center / var(--dot-space) var(--dot-space),
+        var(--dot-color);
 }
 
 body {
@@ -34,31 +42,31 @@ body {
 }
 
 section p {
-  color: var(--text-colour-darker);
+    color: var(--text-colour-darker);
 }
 
-h1 { 
-  font-size: 2.5em;
+h1 {
+    font-size: 2.5em;
 }
 
 h2 {
-  font-size: 2em;
+    font-size: 2em;
 }
 
 h3 {
-  font-size: 1.75em;
+    font-size: 1.75em;
 }
 
 h4 {
-  font-size: 1.5em;
+    font-size: 1.5em;
 }
 
 h5 {
-  font-size: 1.25em;
+    font-size: 1.25em;
 }
 
 h6 {
-  font-size: 1em;
+    font-size: 1em;
 }
 
 h1,
@@ -67,10 +75,10 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Bai Jamjuree', sans-serif;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  color: var(--text-colour);
+    font-family: "Bai Jamjuree", sans-serif;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: var(--text-colour);
 }
 
 a {
@@ -97,7 +105,9 @@ blockquote {
 code,
 pre {
     color: var(--text-colour);
-    font-family: 'JetBrains Mono', Monaco, Bitstream Vera Sans Mono, Lucida Console, Terminal, Consolas, Liberation Mono, DejaVu Sans Mono, Courier New, monospace;
+    font-family: "JetBrains Mono", Monaco, Bitstream Vera Sans Mono,
+        Lucida Console, Terminal, Consolas, Liberation Mono, DejaVu Sans Mono,
+        Courier New, monospace;
 }
 
 pre {
@@ -141,132 +151,136 @@ table {
 }
 
 @media screen and (min-width: 768px) {
-  .logo {
-    display: none;
-  }
+    .logo {
+        display: none;
+    }
 }
 
-@keyframes  animation-in {
-  from {
-      opacity: 0;
-      scale: 0.9;
-  }
-  to {
-      opacity: 1;
-      scale: 1;
-  }
-  
+@keyframes animation-in {
+    from {
+        opacity: 0;
+        scale: 0.9;
+    }
+    to {
+        opacity: 1;
+        scale: 1;
+    }
 }
 
 section {
-  opacity: 0;
-  animation: animation-in 1s forwards 0.1s cubic-bezier( 0.86, 0, 0.07, 1 );
-}
-
-section { 
-  h1, h2, h3, h4, h5, h6 {
     opacity: 0;
-    animation: animation-in 1s forwards 0.2s cubic-bezier( 0.86, 0, 0.07, 1 );
-  }
-
+    animation: animation-in 1s forwards 0.1s cubic-bezier(0.86, 0, 0.07, 1);
 }
 
-section ul, ol {
-  opacity: 0;
-  animation: animation-in 1s forwards 0.4s cubic-bezier( 0.86, 0, 0.07, 1 );
+section {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        opacity: 0;
+        animation: animation-in 1s forwards 0.2s cubic-bezier(0.86, 0, 0.07, 1);
+    }
 }
 
-section p{
-  opacity: 0;
-  animation: animation-in 0.8s forwards 0.4s cubic-bezier( 0.86, 0, 0.07, 1 );
+section ul,
+ol {
+    opacity: 0;
+    animation: animation-in 1s forwards 0.4s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+section p {
+    opacity: 0;
+    animation: animation-in 0.8s forwards 0.4s cubic-bezier(0.86, 0, 0.07, 1);
 }
 
 section img {
-  max-width: 80%;
-  max-height: 40vh;
-  border-radius: 10px;
-  opacity: 0;
-  animation: animation-in 1s forwards 0.4s cubic-bezier( 0.86, 0, 0.07, 1 );
+    max-width: 80%;
+    max-height: 40vh;
+    border-radius: 10px;
+    opacity: 0;
+    animation: animation-in 1s forwards 0.4s cubic-bezier(0.86, 0, 0.07, 1);
 }
 
 section {
-  pre, table, .highlight {
-    opacity: 0;
-    animation: animation-in 1s forwards 0.5s cubic-bezier( 0.86, 0, 0.07, 1 );
-  }
+    pre,
+    table,
+    .highlight {
+        opacity: 0;
+        animation: animation-in 1s forwards 0.5s cubic-bezier(0.86, 0, 0.07, 1);
+    }
 }
 
-
-
 .logo {
-  width: 100%;
+    width: 100%;
 }
 
 .highlight .cm {
-  color: var(--light-gray);
+    color: var(--light-gray);
 }
 .highlight .cp {
-  color: var(--light-gray);
+    color: var(--light-gray);
 }
 .highlight .c1 {
-  color: var(--light-gray);
+    color: var(--light-gray);
 }
 .highlight .cs {
-  color: var(--light-gray);
+    color: var(--light-gray);
 }
 .highlight .c,
 .highlight .cd {
-  color: var(--light-gray);
+    color: var(--light-gray);
 }
 .highlight .err {
-  color: #a61717;
-  background-color: #e3d2d2;
+    color: #a61717;
+    background-color: #e3d2d2;
 }
 .highlight .gd {
-  color: var(--text-colour);
-  background-color: #ffdddd;
+    color: var(--text-colour);
+    background-color: #ffdddd;
 }
 .highlight .ge {
-  color: var(--text-colour);
+    color: var(--text-colour);
 }
 .highlight .gr {
-  color: #ff8686;
+    color: #ff8686;
 }
 .highlight .gh {
-  color: var(--light-gray);
+    color: var(--light-gray);
 }
 .highlight .gi {
-  color: var(--text-colour);
-  background-color: #ddffdd;
+    color: var(--text-colour);
+    background-color: #ddffdd;
 }
 .highlight .go {
-  color: #888888;
+    color: #888888;
 }
 .highlight .gp {
-  color: #555555;
+    color: #555555;
 }
 .highlight .gs {
-  color: var(--text-colour);
+    color: var(--text-colour);
 }
 .highlight .gu {
-  color: var(--light-gray);
+    color: var(--light-gray);
 }
 .highlight .gt {
-  color: #ff7f7f;
+    color: #ff7f7f;
 }
 .highlight .kc,
 .highlight .kd,
 .highlight .kn,
 .highlight .kp,
 .highlight .kr {
-  color: var(--text-colour);
+    color: var(--text-colour);
 }
 .highlight .kt {
-  color: #97b1ff;
+    color: #97b1ff;
 }
 .highlight .k,
 .highlight .kv {
-  color: var(--text-colour);
+    color: var(--text-colour);
 }
 .highlight .mf,
 .highlight .mh,
@@ -276,7 +290,7 @@ section {
 .highlight .m,
 .highlight .mb,
 .highlight .mx {
-  color: #9df9f9;
+    color: #9df9f9;
 }
 .highlight .sb,
 .highlight .sc,
@@ -288,59 +302,60 @@ section {
 .highlight .sx,
 .highlight .s1,
 .highlight .s {
-  color: rgb(229, 93, 127);
+    color: rgb(229, 93, 127);
 }
 .highlight .sr {
-  color: #40f06c;
+    color: #40f06c;
 }
 .highlight .ss {
-  color: #f967d5;
+    color: #f967d5;
 }
 .highlight .na {
-  color: #83ffff;
+    color: #83ffff;
 }
 .highlight .bp {
-  color: var(--light-gray);
+    color: var(--light-gray);
 }
 .highlight .nb {
-  color: #69d9ff;
+    color: #69d9ff;
 }
 .highlight .nc {
-  color: #7295ff;
+    color: #7295ff;
 }
 .highlight .no {
-  color: #008080;
+    color: #008080;
 }
 .highlight .nd {
-  color: #3f5d5d;
+    color: #3f5d5d;
 }
 .highlight .ni {
-  color: #ff5aff;
+    color: #ff5aff;
 }
 .highlight .ne,
 .highlight .nf,
 .highlight .nl {
-  color: #ff4747;
+    color: #ff4747;
 }
 .highlight .nn {
-  color: #ff6a6a;
+    color: #ff6a6a;
 }
 .highlight .nt {
-  color: #3d3dff;
+    color: #3d3dff;
 }
 .highlight .vc,
 .highlight .vg,
 .highlight .vi,
 .highlight .nv {
-  color: #7affff;
+    color: #7affff;
 }
 .highlight .ow,
 .highlight .o {
-  color: var(--text-colour);
+    color: var(--text-colour);
 }
 .highlight .w {
-  color: #bbbbbb;
+    color: #bbbbbb;
 }
 .highlight {
-  background-color: var(--background-colour-light);
+    background-color: var(--background-colour-light);
+    border-radius: 5px;
 }
