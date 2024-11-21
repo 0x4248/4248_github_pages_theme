@@ -183,6 +183,7 @@ section p{
 
 section img {
   max-width: 80%;
+  max-height: 40vh;
   border-radius: 10px;
   opacity: 0;
   animation: animation-in 1s forwards 0.4s cubic-bezier( 0.86, 0, 0.07, 1 );
